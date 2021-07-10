@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print Hello</title>
+    <style>
+        .body{
+            margin:0px;
+            background-color: blanchedalmond;
+        }
+        .main{
+            background-color: blue;
+            width: fit-content;
+            height: fit-content;
+        }
+        .header,.answer{
+            width: 100%;
+            height: fit-content;
+            color: blanchedalmond;
+            background-color: blue;
+            font-size: 20px;
+            font-family: segoe ui;
+            text-align: center;
+        }
+        .p Input[type="text"]{
+            font-size: 20px;
+            font-family: segoe ui;
+            background-color:white;
+            color:black;
+        }
+        .button{
+            font-size:20px;
+            font-family: segoe ui;
+            background-color: red;
+            cursor:pointer;
+            border: none;
+        }
+        .button:hover{
+            background-color: pink;
+            border:none;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header" id="header"></div>
+        <div class="answer" id="answer">
+            <p>Name* :<Input type="text" placeholder="Enter Name" name="name" id="name" required></p>
+            <button class="button" onclick="func()">Try this</button>
+
+        </div>
+    </div>
+    <script>
+        function func(){
+            if(document.getElementById("name").value){
+                document.getElementById("header").innerText = "Hello " + document.getElementById("name").value;
+            }
+            else{
+                document.getElementById("header").innerText = "Hello Folks";
+            }
+        }
+    </script>
+</body>
+</html>
