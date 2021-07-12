@@ -1,0 +1,31 @@
+<html>
+    <script>
+        function check(word){
+            let n = word.length;
+            word = word.toLowerCase();
+            for(let i = 0; i <n; i++,n--){
+                if(word[i] != word[n-1])
+                    return false;
+            }
+            return true
+            
+        }
+        function print(str){
+            console.log("Palindrome in '" + str +"' are");
+            str = str+ " ";
+            let word = "";
+            for(let i = 0; i< str.length; i++){
+                let ch = str[i];
+                if(ch != ' ')
+                    word = word + str[i];
+                else{
+                    if(check(word)==true){
+                        console.log(word);
+                    }
+                    word="";
+                }
+            }
+        }
+        print("Madam Speaks Malayalam");
+    </script>
+</html>
